@@ -1,0 +1,23 @@
+<form [formGroup]="edit">
+  <fieldset class="form-group">
+    <br>
+    <mat-form-field>
+
+      <input matInput placeholder="Employee ID" formControlName="empID" type="number">
+      <mat-hint>Enter an integer</mat-hint>
+
+    </mat-form-field>
+    <br><br>
+    <mat-form-field>
+      <input matInput placeholder="Name" formControlName="name">
+    </mat-form-field>
+    <br><br>
+    <mat-form-field>
+      <input matInput placeholder="Salary" formControlName="salary" type="number">
+    </mat-form-field>
+
+    <div mat-dialog-actions>
+      <button mat-raised-button color="primary"  [mat-dialog-close]="data.animal"  cdkFocusInitial (click)="onSubmit()">Edit</button>
+    </div>
+  </fieldset>
+</form>
